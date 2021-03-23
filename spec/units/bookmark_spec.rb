@@ -2,15 +2,10 @@ require 'bookmark'
 
 describe Bookmark do
 
-  describe 'initialize' do
-    it 'has a collection of bookmarks' do
-      expect(subject.bookmarks).to eq([])
-    end
-  end
 
-  describe 'all' do
+  describe '#self.all' do
     it 'lists all stored bookmarks' do
-      expect(subject.all).to be_a_kind_of(Array)
+      expect(Bookmark.all).to include("http://www.makersacademy.com")
     end
   end
 
